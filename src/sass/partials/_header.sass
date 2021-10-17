@@ -1,0 +1,91 @@
+.header
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 1660px
+    margin: 0 auto
+    padding: 25px 30px
+    +r(1023)
+      padding: 15px 15px
+  &__actions
+    display: flex
+    align-items: center
+
+.logo
+  max-width: 285px
+  &__pic
+    max-width: 100%
+
+.sign-in
+  margin-right: 95px
+  font-family: 'Oxygen', sans-serif
+  font-weight: 700
+  font-size: 0
+  color: $brand-dark-blue
+  transition: color 0.15s linear
+  &:hover
+    color: lighten($brand-dark-blue, 15%)
+    .icon
+      fill: lighten($brand-dark-blue, 15%)
+  .icon
+    vertical-align: middle
+    font-size: rem(40)
+    transition: fill 0.15s linear
+  span
+    margin-left: 12px
+    display: inline-block
+    vertical-align: middle
+    font-size: rem(19)
+
+.header-link
+  position: relative
+  display: inline-block
+  padding: 12px 0
+  margin-right: 50px
+  font-family: 'Oxygen', sans-serif
+  font-size: rem(19)
+  font-weight: 700
+  text-decoration: none
+  color: $green
+  transition: color 0.15s linear
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: $green
+    transition: width 0.2s ease
+  &:hover
+    color: lighten($green, 10%)
+    &:after
+      width: 0
+
+
+.theme-switcher
+  position: relative
+  font-size: 0
+  &:after
+    content: ''
+    position: absolute
+    width: 1px
+    background: #000
+    top: 0
+    left: 50px
+    bottom: 0
+  &__button
+    background: none
+    vertical-align: middle
+    svg
+      display: block
+      font-size: rem(34)
+    &--light
+      margin-right: rem(16)
+      svg
+        fill: #FDAC34
+    &--dark
+      margin-left: rem(22.4)
+      svg
+        font-size: rem(24)
