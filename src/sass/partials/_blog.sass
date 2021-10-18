@@ -7,6 +7,8 @@
     align-items: flex-start
     min-height: 500px
     padding-left: 30px
+    +r(1360)
+      min-height: 400px
     +r(1200)
       min-height: 350px
     +r(1023)
@@ -36,7 +38,7 @@
     color: #fafafa
     max-width: 860px
     background: linear-gradient(90deg, rgba(143, 138, 210, 0.7) 50.05%, rgba(255, 255, 255, 0) 100%)
-    +r(1200)
+    +r(1360)
       margin-top: 103px
       margin-bottom: 30px
       max-width: 670px
@@ -83,18 +85,20 @@
     background: radial-gradient(61.7% 321.59% at 48% 50%, rgba(52, 84, 253, 0.4) 0%, rgba(101, 52, 206, 0.4) 100%, rgba(66, 51, 85, 0.4) 100%, rgba(0, 0, 0, 0.18) 100%), linear-gradient(95.11deg, #33669A 6.92%, #23C2C0 71.47%)
 
 .latest
-  margin-top: 50px
+  margin: 50px 0 65px
+  +r(1360)
+    margin-bottom: 50px
   &__wrapper
     overflow: hidden
   &__cards
     display: flex
     flex-wrap: wrap
     margin: 0 -20px
-    +r(1200)
+    +r(1360)
       margin: 0 -10px
     +r(767)
       margin: 0 auto
-      max-width: 600px
+      max-width: 550px
 
 .latest-card
   display: flex
@@ -109,16 +113,14 @@
   color: #fafafa
   border-radius: 5px
   min-height: 396px
-  flex-basis: calc(50% - 40px)
-  &:nth-last-child(n+5),
-  &:nth-last-child(n+5) ~ div
-    &:not(.latest-card--big)
-      flex-basis: calc(33.33% - 40px)
-  +r(1200)
+  flex-basis: calc(33.33% - 40px)
+  +r(1360)
     min-height: 308px
     margin: 0 10px 20px
     padding: 15px 15px 20px
     flex-basis: calc(33.33% - 20px)
+  +r(1023)
+    min-height: 280px
   +r(767)
     margin: 0 0 20px
     padding: 45px 10px 12px
@@ -141,8 +143,9 @@
     min-height: 396px
     &:before
       background: linear-gradient(358.93deg, rgba(7, 14, 65, 0.65) 0.87%, rgba(37, 77, 155, 0) 99.06%)
-    +r(1200)
+    +r(1360)
       flex-basis: calc(50% - 20px)
+    +r(1200)
       min-height: 260px
     +r(767)
       flex-basis: 100%
@@ -160,7 +163,7 @@
   &__title
     max-width: 645px
     margin-bottom: 4px
-    +r(1200)
+    +r(1360)
       font-size: rem(25)
     +r(767)
       font-size: rem(21)
@@ -169,7 +172,7 @@
     float: left
     font-size: rem(20)
     font-weight: 300
-    +r(1200)
+    +r(1360)
       font-size: rem(18)
     +r(767)
       float: none
@@ -199,7 +202,74 @@
   line-height: 1
   &:last-child
     margin-right: 0
-  +r(1200)
+  +r(1360)
     font-size: rem(18)
   +r(767)
     font-size: rem(16)
+
+.popular
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -20px
+    +r(1360)
+      margin: 0 -10px
+    +r(500)
+      margin: 0
+
+
+.simple-card
+  flex-basis: calc(25% - 40px)
+  margin: 0 20px 40px
+  padding: 11px 15px 16px
+  background: #FFFFFF
+  box-shadow: 0px 1px 3px 1px rgba(66, 66, 66, 0.16), 0px 1px 1px rgba(66, 66, 66, 0.08)
+  border-radius: 3px
+  line-height: 1.2
+  +r(1360)
+    flex-basis: calc(25% - 20px)
+    margin: 0 10px 20px
+  +r(1023)
+    padding: 11px 10px 16px
+    flex-basis: calc(50% - 20px)
+  +r(500)
+    flex-basis: 100%
+    margin: 0 0 20px
+  &__title
+    height: 85px
+    margin-bottom: 23px
+    overflow: hidden
+    font-family: 'Oxygen', sans-serif
+    font-weight: 700
+    font-size: rem(18)
+    +r(1200)
+      height: 63px
+      margin-bottom: 7px
+    +r(500)
+      height: auto
+      max-height: 85px
+  &__info
+    display: flex
+    justify-content: space-between
+    +r(1200)
+      flex-direction: column
+  &__more
+    position: relative
+    text-decoration: none
+    color: $violet
+    border-bottom: 1px solid $violet
+    padding-bottom: 5px
+    transition: all 0.15s linear
+    &:hover
+      border-bottom-color: transparent
+      color: darken($violet, 10%)
+    +r(1200)
+      align-self: flex-end
+      font-size: rem(15)
+  &__date
+    color: $brand-gray
+    font-weight: 300
+    +r(1200)
+      order: -1
+      margin-bottom: 15px
+      font-size: rem(14)
