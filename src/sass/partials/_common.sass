@@ -1,0 +1,22 @@
+.container
+  max-width: 1560px
+  margin: 0 auto
+  padding: 0 30px
+  &--blog
+    padding-top: 48px
+  +r(1023)
+    padding: 0 15px
+    &--blog
+      padding-top: 48px
+  +r(500)
+    &--blog
+      padding-top: 0
+
+
+.mob-hidden
+  +r(500)
+    display: none
+
+.mob-visible
+  +r(500)
+    display: inherit

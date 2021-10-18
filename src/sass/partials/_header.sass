@@ -1,19 +1,31 @@
 .header
+  position: relative
   &__inner
     display: flex
     justify-content: space-between
-    align-items: center
+    align-items: flex-start
     max-width: 1660px
     margin: 0 auto
     padding: 25px 30px
+    +r(1200)
+      padding: 22px 30px
     +r(1023)
       padding: 15px 15px
   &__actions
     display: flex
     align-items: center
+    padding-top: 4px
+    +r(767)
+      padding-top: 0
 
 .logo
   max-width: 285px
+  +r(1200)
+    max-width: 250px
+  +r(767)
+    max-width: 200px
+  +r(500)
+    max-width: 150px
   &__pic
     max-width: 100%
 
@@ -24,6 +36,10 @@
   font-size: 0
   color: $brand-dark-blue
   transition: color 0.15s linear
+  +r(1200)
+    margin-right: 70px
+  +r(500)
+    margin-right: 0
   &:hover
     color: lighten($brand-dark-blue, 15%)
     .icon
@@ -32,16 +48,21 @@
     vertical-align: middle
     font-size: rem(40)
     transition: fill 0.15s linear
+    +r(500)
+      font-size: rem(30)
   span
     margin-left: 12px
     display: inline-block
     vertical-align: middle
     font-size: rem(19)
+    +r(500)
+      font-size: rem(17)
+
 
 .header-link
   position: relative
   display: inline-block
-  padding: 12px 0
+  padding: 9px 0
   margin-right: 50px
   font-family: 'Oxygen', sans-serif
   font-size: rem(19)
@@ -67,6 +88,16 @@
 .theme-switcher
   position: relative
   font-size: 0
+  +r(500)
+    position: absolute
+    z-index: 1
+    top: 100%
+    right: 12px
+    margin-top: 10px
+    padding: 6px 12px 6px 9px
+    box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.2)
+    border-radius: 5px
+    background: #fff
   &:after
     content: ''
     position: absolute
@@ -75,6 +106,10 @@
     top: 0
     left: 50px
     bottom: 0
+    +r(500)
+      top: 5px
+      bottom: 5px
+      left: 54px
   &__button
     background: none
     vertical-align: middle
@@ -83,9 +118,13 @@
       font-size: rem(34)
     &--light
       margin-right: rem(16)
+      +r(500)
+        margin-right: rem(12.8)
       svg
         fill: #FDAC34
     &--dark
       margin-left: rem(22.4)
+      +r(500)
+        margin-left: rem(16)
       svg
         font-size: rem(24)

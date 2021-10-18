@@ -4,6 +4,29 @@ title: Blog
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-  <h1 class="title-h1">Blog</h1>
+  <div class="container container--blog">
+    <h1 class="title-h1 mob-hidden">Blog</h1>
+    <div class="blog-main-slider js-blog-main-slider">
+      <div>
+        <div class="blog-main-slider__inner">
+          <img class="blog-main-slider__img" src="img/slide-img.jpg" alt="slide 1">
+          <div class="blog-main-slider__text">
+            It Might Be More Affordable than You Think to Fly to Your Destination
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="blog-main-slider__inner">
+          <img class="blog-main-slider__img" src="img/slide-img.jpg" alt="slide 2">
+        </div>
+      </div>
+      <div>
+        <div class="blog-main-slider__inner">
+          <img class="blog-main-slider__img" src="img/slide-img.jpg" alt="slide 3">
+        </div>
+      </div>
+    </div>
+    <p class="title-h1 mob-visible" hidden>Blog</p>
+  </div>
 
 {% endblock %}
