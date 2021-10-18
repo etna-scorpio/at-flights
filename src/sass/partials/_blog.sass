@@ -1,7 +1,7 @@
 .blog-main-slider
   margin: 60px 0 80px
   +r(500)
-    margin: 0 -15px 35px
+    margin: 0 -15px 50px
   &__inner
     display: flex
     align-items: flex-start
@@ -70,3 +70,136 @@
           height: 16px
           background: $yellow
           border: 1px solid #33669A
+
+.blog-section-title
+  position: relative
+  margin-bottom: 50px
+  &:after
+    content: ''
+    display: block
+    margin-top: 15px
+    height: 2px
+    background: $brand-dark-navy
+    background: radial-gradient(61.7% 321.59% at 48% 50%, rgba(52, 84, 253, 0.4) 0%, rgba(101, 52, 206, 0.4) 100%, rgba(66, 51, 85, 0.4) 100%, rgba(0, 0, 0, 0.18) 100%), linear-gradient(95.11deg, #33669A 6.92%, #23C2C0 71.47%)
+
+.latest
+  margin-top: 50px
+  &__wrapper
+    overflow: hidden
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -20px
+    +r(1200)
+      margin: 0 -10px
+    +r(767)
+      margin: 0 auto
+      max-width: 600px
+
+.latest-card
+  display: flex
+  align-items: flex-end
+  position: relative
+  margin: 0 20px 35px
+  padding: 20px 20px 30px
+  background-color: #c4c4c4
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  color: #fafafa
+  border-radius: 5px
+  min-height: 396px
+  flex-basis: calc(50% - 40px)
+  &:nth-last-child(n+5),
+  &:nth-last-child(n+5) ~ div
+    &:not(.latest-card--big)
+      flex-basis: calc(33.33% - 40px)
+  +r(1200)
+    min-height: 308px
+    margin: 0 10px 20px
+    padding: 15px 15px 20px
+    flex-basis: calc(33.33% - 20px)
+  +r(767)
+    margin: 0 0 20px
+    padding: 45px 10px 12px
+    flex-basis: 100%
+    min-height: 260px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba($brand-dark-navy, 0.65)
+    background: linear-gradient(358.93deg, rgba(7, 14, 65, 0.65) 0.87%, rgba(37, 77, 155, 0.6) 99.06%)
+    background-size: cover
+    background-position: 50% 50%
+    border-radius: 5px
+  &--big
+    flex-basis: calc(50% - 40px)
+    min-height: 396px
+    &:before
+      background: linear-gradient(358.93deg, rgba(7, 14, 65, 0.65) 0.87%, rgba(37, 77, 155, 0) 99.06%)
+    +r(1200)
+      flex-basis: calc(50% - 20px)
+      min-height: 260px
+    +r(767)
+      flex-basis: 100%
+      &:before
+        background: linear-gradient(358.93deg, rgba(7, 14, 65, 0.65) 0.87%, rgba(37, 77, 155, 0.6) 99.06%)
+  &__info
+    position: relative
+    width: 100%
+    +r(767)
+      display: flex
+      flex-direction: column
+      height: 100%
+      width: 100%
+      justify-content: space-between
+  &__title
+    max-width: 645px
+    margin-bottom: 4px
+    +r(1200)
+      font-size: rem(25)
+    +r(767)
+      font-size: rem(21)
+  &__date
+    margin-top: 10px
+    float: left
+    font-size: rem(20)
+    font-weight: 300
+    +r(1200)
+      font-size: rem(18)
+    +r(767)
+      float: none
+      margin-top: 0
+      font-size: rem(16)
+
+.tags
+  margin-left: 20px
+  font-size: 0
+  float: right
+  +clr
+  +r(767)
+    align-self: flex-end
+    float: none
+    margin-left: 0
+
+.tag
+  display: inline-block
+  margin: 10px 15px 10px 0
+  padding: 4px 8px 6px
+  background: #2BB826
+  color: #fff
+  box-shadow: 0px 2px 5px rgba(33, 36, 44, 0.5)
+  border-radius: 3px
+  font-size: rem(20)
+  font-weight: 300
+  line-height: 1
+  &:last-child
+    margin-right: 0
+  +r(1200)
+    font-size: rem(18)
+  +r(767)
+    font-size: rem(16)
