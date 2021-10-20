@@ -1,0 +1,84 @@
+.footer
+  margin-top: 185px
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    max-width: 1660px
+    margin: 0 auto
+    padding: 25px 30px
+    +r(1200)
+      padding: 22px 30px
+    +r(1023)
+      padding: 15px 15px
+  &__socs
+    display: flex
+    align-items: center
+    .soc-bg
+      fill: none
+      width: 45px
+      height: 49px
+  &__icons
+    display: flex
+    align-items: center
+  &__link
+    position: relative
+    display: block
+    text-decoration: none
+    margin: 0 7.5px
+    &:hover
+      .icon
+        fill: #fff
+    &--fb
+      .icon-fb
+        font-size: rem(22)
+        margin: -14px 0 0 -5px
+      .soc-bg
+        stroke: url(#fb-grad)
+      &:hover
+        .soc-bg
+          fill: #4267B2
+    &--tw
+      .icon-twitter
+        font-size: rem(20)
+        margin: -12px 0 0 -11px
+      .soc-bg
+        stroke: url(#tw-grad)
+      &:hover
+        .soc-bg
+          fill: #1DA1F2
+          stroke: #1DA1F2
+    &--telegram
+      .icon-telegram
+        font-size: rem(21)
+        margin: -12px 0 0 -13px
+        fill: #37AEE2
+        color: #289BCC
+        transition: color 0.1s linear
+      .soc-bg
+        stroke: url(#telegram-grad)
+      &:hover
+        .icon-telegram
+          color: #C8DAEA
+        .soc-bg
+          fill: url(#telegram-grad)
+    &--instagram
+      .icon-instagram
+        width: 25px
+        height: 25px
+        margin: -15px 0 0 -12px
+        fill: url(#insta-grad)
+        transition: fill 0.15s linear
+      .soc-bg
+        transition: fill 0.15s linear
+        stroke: url(#instagram-grad)
+      &:hover
+        .soc-bg
+          fill: url(#instagram-grad-hover)
+    .soc-bg
+      transition: fill 0.15s linear
+    .icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transition: fill 0.15s linear

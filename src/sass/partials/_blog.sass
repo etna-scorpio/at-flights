@@ -211,11 +211,155 @@
   &__cards
     display: flex
     flex-wrap: wrap
-    margin: 0 -20px
+    margin: 0 -20px 30px
     +r(1360)
-      margin: 0 -10px
+      margin: 0 -10px 50px
     +r(500)
       margin: 0
+  &__news
+    display: flex
+    margin: 0 -20px 55px
+    +r(1360)
+      margin: 0 -10px 45px
+    +r(1200)
+      flex-wrap: wrap
+    +r(767)
+      max-width: 550px
+      margin: 0 auto 60px
+  .slick-dots
+    margin: 10px auto 0
+    text-align: center
+    font-size: 0
+    li
+      display: inline-block
+      margin: 0 6px
+      button
+        font-size: 0
+        width: 12px
+        height: 12px
+        background: $violet
+        border-radius: 50%
+      &.slick-active
+        button
+          width: 16px
+          height: 16px
+          background: $yellow
+          border: 1px solid #33669A
+
+.news-card
+  flex-basis: 33.33%
+  max-width: 473px
+  margin: 0 20px 15px
+  &:nth-last-child(n+4),
+  &:nth-last-child(n+4) ~ .news-card
+    max-width: 345px
+    flex-basis: 25%
+    .news-card__img
+      max-height: initial
+  &:hover
+    .news-card__pic
+      &:after
+        opacity: 1
+        visibility: visible
+    .news-card__watched
+      opacity: 1
+  +r(1360)
+    margin: 0 10px 15px
+  +r(1200)
+    max-width: initial
+    flex-basis: calc(50% - 20px)
+    margin: 0 10px 45px
+  +r(767)
+    margin: 0
+    flex-basis: 100%
+    padding: 5px
+  &__pic
+    position: relative
+    margin-bottom: 11px
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      box-shadow: 0px 4px 5px 0px rgba(37, 77, 155, 0.25), 0px 4px 10px 0px rgba(37, 77, 155, 0.1)
+      opacity: 0
+      visibility: hidden
+      transition: all 0.2s ease-in
+      border-radius: 5px
+      +r(767)
+        opacity: 1
+        visibility: visible
+  &__img
+    display: block
+    width: 100%
+    max-height: 250px
+    border-radius: 5px
+    object-fit: cover
+    object-position: center center
+    +r(1200)
+      max-height: 240px
+      min-height: 180px
+  &__watched
+    position: absolute
+    display: flex
+    align-items: center
+    left: 0
+    bottom: 0
+    padding: 5px 8px
+    font-family: 'Oxygen', sans-serif
+    font-size: rem(18)
+    font-weight: 700
+    color: $brand-dark-navy
+    background: rgba(255, 255, 255, 0.6)
+    border: 1px solid rgba(170, 170, 170, 0.25)
+    border-radius: 0 5px 0 5px
+    opacity: 0
+    +nosel
+    transition: opacity 0.2s ease-in
+    .icon
+      font-size: 9px
+      margin-right: 5px
+    +r(767)
+      opacity: 1
+  &__hashtags
+    font-size: 0
+    margin: 0 -5px 11px
+    color: $brand-dark-blue
+    li
+      display: inline-block
+      font-size: rem(16)
+      line-height: 1.5
+      margin: 0 5px
+    &--green
+      color: $green
+    &--violet
+      color: $violet
+  &__title
+    margin-bottom: 8px
+    font-size: rem(20)
+    font-family: 'Oxygen', sans-serif
+    font-weight: 700
+    line-height: 1.2
+    +r(1200)
+      font-weight: rem(19)
+    +r(767)
+      font-size: rem(18)
+  &__text
+    position: relative
+    height: 63px
+    overflow: hidden
+    color: $brand-gray
+    line-height: 1.3
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      height: 21px
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
 
 
 .simple-card
@@ -273,3 +417,59 @@
       order: -1
       margin-bottom: 15px
       font-size: rem(14)
+
+
+
+.pagination
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 50px
+  +r(767)
+    display: block
+    text-align: center
+  &__list
+    display: flex
+    margin: 0 37px
+    flex-wrap: wrap
+    max-width: 500px
+    +r(767)
+      justify-content: center
+      width: 100%
+      margin: 0 auto 15px
+  &__button
+    display: inline-block
+    min-width: 97px
+    margin-bottom: 10px
+    padding: 11px 5px 13px
+    text-decoration: none
+    text-align: center
+    background: #EAEAEA
+    color: $brand-dark-navy
+    font-weight: 500
+    line-height: 1
+    &:hover
+      background: $brand-dark-navy
+      color: #fafafa
+    +r(767)
+      margin-bottom: 20px
+  &__number
+    margin: 0 5px 10px
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+      background: #eaeaea
+      color: $brand-dark-navy
+      text-decoration: none
+      line-height: 1.2
+      width: 35px
+      height: 35px
+      transition: all 0.15s linear
+    &:hover,
+    &--active
+      a
+        background: $brand-dark-navy
+        color: #fafafa
+    +r(767)
+      margin: 0 3px 10px
