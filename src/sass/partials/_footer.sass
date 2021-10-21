@@ -1,9 +1,11 @@
 .footer
   margin-top: 185px
+  +r(767)
+    margin-top: 120px
   &__inner
     display: flex
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
     max-width: 1660px
     margin: 0 auto
     padding: 25px 30px
@@ -11,24 +13,54 @@
       padding: 22px 30px
     +r(1023)
       padding: 15px 15px
+    +r(767)
+      display: block
+      padding-bottom: 50px
   &__socs
     display: flex
     align-items: center
+    padding-left: 20px
+    font-family: 'Oxygen', sans-serif
+    font-size: rem(20)
+    font-weight: 700
+    +r(1023)
+      display: block
+      font-size: rem(18)
+    +r(767)
+      margin-top: 40px
+      padding-left: 0
     .soc-bg
       fill: none
       width: 45px
       height: 49px
+    span
+      display: block
+      align-self: flex-start
+      margin: 15px 23px 0 0
+      line-height: 1
+      +r(1023)
+        display: none
+      +r(767)
+        display: block
+        margin: 15px 10px 20px 0
   &__icons
     display: flex
+    flex-wrap: wrap
     align-items: center
   &__link
     position: relative
     display: block
     text-decoration: none
-    margin: 0 7.5px
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
     &:hover
       .icon
         fill: #fff
+    +r(1023)
+      margin-right: 10px
+    +r(767)
+      margin-bottom: 10px
     &--fb
       .icon-fb
         font-size: rem(22)
@@ -68,13 +100,53 @@
         height: 25px
         margin: -15px 0 0 -12px
         fill: url(#insta-grad)
-        transition: fill 0.15s linear
       .soc-bg
-        transition: fill 0.15s linear
         stroke: url(#instagram-grad)
+    &--whatsapp
+      .icon-whatsapp
+        width: 26px
+        height: 26px
+        margin: -16px 0 0 -12px
+    &--pinterest
+      .icon-pinterest
+        font-size: rem(24)
+        margin: -14px 0 0 -8px
+      .soc-bg
+        stroke: #BD081B
       &:hover
         .soc-bg
-          fill: url(#instagram-grad-hover)
+          fill: #BD081B
+    &--linkedin
+      .icon-linkedin
+        font-size: rem(22)
+        margin: -15px 0 0 -10px
+      .soc-bg
+        stroke: #0D5CAB
+      &:hover
+        .soc-bg
+          fill: #0A66C2
+    &--instagram,
+    &--whatsapp
+      .icon--hover
+        z-index: 1
+        opacity: 0
+        visibility: hidden
+        transition: all 0.15s linear
+      .soc-bg.soc-bg--hover
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: 0
+        visibility: hidden
+        transition: opacity 0.15s linear, visibility 0.15s linear
+      &:hover
+        .icon--hover,
+        .soc-bg--hover
+          opacity: 1
+          visibility: visible
     .soc-bg
       transition: fill 0.15s linear
     .icon
@@ -82,3 +154,6 @@
       top: 50%
       left: 50%
       transition: fill 0.15s linear
+  .logo
+    +r(500)
+      max-width: 200px

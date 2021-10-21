@@ -10,7 +10,7 @@ $('.js-blog-main-slider').slick({
 
 
 function showMobCarousel() {
-  if ($(window).width() < 767 && !$('.js-mob-slider').hasClass('slick-initialized')) {
+  if ($(window).outerWidth() < 768 && !$('.js-mob-slider').hasClass('slick-initialized')) {
     $('.js-mob-slider').slick({
       dots: true,
       arrows: false,
@@ -19,13 +19,13 @@ function showMobCarousel() {
   }
 
   $(window).resize(function() {
-    if ($(window).width() < 767 && !$('.js-mob-slider').hasClass('slick-initialized')) {
+    if ($(window).outerWidth() < 768 && !$('.js-mob-slider').hasClass('slick-initialized')) {
       $('.js-mob-slider').slick({
         dots: true,
         arrows: false,
         adaptiveHeight: true
       });
-    } else if ($(window).width() > 767 && $('.js-mob-slider').hasClass('slick-initialized')) {
+    } else if ($(window).outerWidth() > 768 && $('.js-mob-slider').hasClass('slick-initialized')) {
       $('.js-mob-slider').slick('unslick');
     }
   });

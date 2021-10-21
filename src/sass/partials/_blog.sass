@@ -208,6 +208,10 @@
     font-size: rem(16)
 
 .popular
+  &__wrapper
+    +r(767)
+      max-width: 550px
+      margin: 0 auto 60px
   &__cards
     display: flex
     flex-wrap: wrap
@@ -224,8 +228,8 @@
     +r(1200)
       flex-wrap: wrap
     +r(767)
-      max-width: 550px
-      margin: 0 auto 60px
+      display: block
+      margin: 0
   .slick-dots
     margin: 10px auto 0
     text-align: center
@@ -269,6 +273,10 @@
     max-width: initial
     flex-basis: calc(50% - 20px)
     margin: 0 10px 45px
+    &:nth-last-child(n+4),
+    &:nth-last-child(n+4) ~ .news-card
+      flex-basis: calc(50% - 20px)
+      max-width: initial
   +r(767)
     margin: 0
     flex-basis: 100%
