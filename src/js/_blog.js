@@ -33,3 +33,12 @@ function showMobCarousel() {
 
 
 showMobCarousel();
+
+
+$('.js-article-slider').slick({
+  dots: true,
+  fade: true,
+  adaptiveHeight: true,
+  prevArrow: '<button class="slick-prev slick-arrow" aria-label="Next" type="button"><svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg></button>',
+  nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg></button>'
+});

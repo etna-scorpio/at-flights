@@ -1,0 +1,181 @@
+.article
+  padding-top: 80px
+  p
+    margin-top: 25px
+    &:first-child
+      margin-top: 0
+  blockquote
+    position: relative
+    max-width: 775px
+    margin: 60px auto
+    padding: 3.5px 0 3.5px 40px
+    font-size: rem(19)
+    font-weight: 500
+    line-height: 1.7
+    border-left: 5px solid $violet
+    &:before
+      content: '“'
+      position: absolute
+      top: 0
+      left: 22px
+      margin-top: -38px
+      font-size: rem(130)
+      color: rgba(51, 102, 154, 0.15)
+      line-height: 1
+  img.alignright,
+  img.alignleft
+    display: block
+    max-width: 50%
+    +clr
+    &:last-child
+      margin-bottom: 0
+  img.alignright
+    float: right
+    margin: 0 0 5px 25px
+  img.alignleft
+    float: left
+    margin: 0 25px 5px 0
+  iframe
+    width: 100%
+    margin: 60px auto
+    min-height: 450px
+  .wp-block-collage
+    margin: 60px auto 40px
+    .wp-block-columns
+      display: flex
+    .wp-block-column
+      flex-basis: calc(50% - 20px)
+      &:first-child
+        flex-basis: 50%
+        margin-right: 20px
+        figure
+          height: calc(100% - 20px)
+      img
+        display: block
+        width: 100%
+        height: 100%
+        min-height: 275px
+        object-fit: cover
+        font-family: 'object-fit: cover'
+      figure
+        display: block
+        margin-bottom: 20px
+  ul
+    margin: 25px 0 40px
+    max-width: 930px
+    li
+      position: relative
+      margin-bottom: 25px
+      padding-left: 30px
+      &:before
+        content: ''
+        position: absolute
+        top: 8px
+        left: 5px
+        width: 13px
+        height: 13px
+        background: $yellow
+
+.article-date
+  margin-top: 21px
+  font-size: rem(17)
+  font-weight: 500
+  color: #AAAAAA
+
+.article-pic
+  display: block
+  width: 100%
+  max-width: 1920px
+  max-height: 600px
+  min-height: 250px
+  margin: 60px auto
+  object-fit: cover
+  font-family: 'object-fit: cover'
+
+
+.article-slider
+  margin: 60px auto
+  img
+    max-width: 100%
+    min-height: 250px
+    object-fit: cover
+    font-family: 'object-fit: cover'
+  .slick-dots
+    position: absolute
+    bottom: 15px
+    left: 0
+    right: 0
+    text-align: center
+    li
+      display: inline-block
+      margin: 0 6px
+      padding-left: 0
+      &:before
+        display: none
+      button
+        font-size: 0
+        width: 12px
+        height: 12px
+        background: $violet
+        border-radius: 50%
+      &.slick-active
+        button
+          width: 16px
+          height: 16px
+          background: $yellow
+          border: 1px solid #33669A
+  .slick-arrow
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 1
+    top: 50%
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    margin-top: -25px
+    background: #fff
+    font-size: rem(17)
+    transition: background 0.2s linear
+    &:hover,
+    &:active
+      background: $yellow
+  .slick-next
+    right: 15px
+    svg
+      margin-left: 2px
+  .slick-prev
+    left: 15px
+    svg
+      margin-right: 2px
+
+.article-footer
+  display: flex
+  justify-content: space-between
+  max-width: 1060px
+  margin: 60px auto 0
+  padding: 0 30px
+  +r(1023)
+    padding: 0 15px
+
+.article-tag-cloud
+  display: flex
+  h5
+    margin-top: 14px
+    font-size: rem(19)
+    line-height: 1
+
+.article-tags
+  display: flex
+  flex-wrap: wrap
+  margin-left: 20px
+
+.article-vote
+  &__text
+    font-size: rem(19)
+
+.vote-button
+  font-size: rem(18)
+  &--upvote
+    background: $green

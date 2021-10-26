@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title> Blog </title>
+    <title> Article </title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
@@ -18,11 +18,12 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
 
-  <body>
+  <body class="body--article">
     <header class="header">
       <div class="header__inner">
         <a href="#" class="logo"><img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo"></a>
         <div class="header__actions">
+          <a href="#" class="header-link">Blog</a>
           <a href="#" class="sign-in">
             <svg class="icon icon-sign-in">
               <use xlink:href="img/sprite.svg#icon-sign-in"></use>
@@ -46,331 +47,91 @@
     </header>
     <!-- BEGIN content -->
     <div class="out">
-      <div class="container container--blog">
-        <h1 class="title-h1 mob-hidden">Blog</h1>
-        <div class="blog-main-slider js-blog-main-slider">
-          <div>
-            <div class="blog-main-slider__inner">
-              <img class="blog-main-slider__img" src="img/slide-img.jpg" alt="slide 1">
-              <div class="blog-main-slider__text"> It Might Be More Affordable than You Think to Fly to Your Destination </div>
-            </div>
-          </div>
-          <div>
-            <div class="blog-main-slider__inner">
-              <img class="blog-main-slider__img" src="img/slide-img.jpg" alt="slide 2">
-            </div>
-          </div>
-          <div>
-            <div class="blog-main-slider__inner">
-              <img class="blog-main-slider__img" src="img/slide-img.jpg" alt="slide 3">
-            </div>
-          </div>
-        </div>
-        <p class="title-h1 mob-visible" hidden>Blog</p>
-        <section class="latest">
-          <h3 class="title-h3 blog-section-title">Latest articles</h3>
-          <div class="latest__wrapper">
-            <div class="latest__cards">
-              <div class="latest-card latest-card--big" style="background-image: url('img/latest-1.jpg')">
-                <div class="latest-card__info">
-                  <div class="latest-card__text">
-                    <h3 class="title-h3 latest-card__title"> Shell unveils new sustainable aviation fuels (SAF) ambition </h3>
-                    <p class="latest-card__date">21 September 2021</p>
-                  </div>
-                  <div class="tags">
-                    <div class="tag">News</div>
-                    <div class="tag">Aircrafts</div>
-                  </div>
-                </div>
-              </div>
-              <div class="latest-card latest-card--big" style="background-image: url('img/latest-2.jpg')">
-                <div class="latest-card__info">
-                  <div class="latest-card__text">
-                    <h3 class="title-h3 latest-card__title"> Munich Airport’s brewery turns beer into a gin-style spirit </h3>
-                    <p class="latest-card__date">20 September 2021</p>
-                  </div>
-                  <div class="tags">
-                    <div class="tag">News</div>
-                    <div class="tag">Retail</div>
-                    <div class="tag">Spirit</div>
-                  </div>
-                </div>
-              </div>
-              <div class="latest-card latest-card" style="background-image: url('img/latest-3.jpg')">
-                <div class="latest-card__info">
-                  <div class="latest-card__text">
-                    <h3 class="title-h3 latest-card__title"> Star Alliance airlines step up biometric identity programmes </h3>
-                    <p class="latest-card__date">20 September 2021</p>
-                  </div>
-                  <div class="tags">
-                    <div class="tag">News</div>
-                  </div>
-                </div>
-              </div>
-              <div class="latest-card latest-card" style="background-image: url('img/latest-4.jpg')">
-                <div class="latest-card__info">
-                  <div class="latest-card__text">
-                    <h3 class="title-h3 latest-card__title"> Transforming KIX </h3>
-                    <p class="latest-card__date">19 September 2021</p>
-                  </div>
-                  <div class="tags">
-                    <div class="tag">News</div>
-                    <div class="tag">Airports</div>
-                  </div>
-                </div>
-              </div>
-              <div class="latest-card latest-card" style="background-image: url('img/latest-5.jpg')">
-                <div class="latest-card__info">
-                  <div class="latest-card__text">
-                    <h3 class="title-h3 latest-card__title"> Why the aviation industry cannot revert to its pre-pandemic ways </h3>
-                    <p class="latest-card__date">19 September 2021</p>
-                  </div>
-                  <div class="tags">
-                    <div class="tag">Thoughts</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <main class="article">
+        <section class="container container--article">
+          <h1 class="title-h1 mob-hidden">Most Common Issues With Chartering A Private Jet in the USA And How To Solve Them</h1>
+          <div class="article-date">07 October 2021</div>
         </section>
-        <section class="popular">
-          <h3 class="title-h3 blog-section-title">Popular topics</h3>
-          <div class="popular__wrapper">
-            <div class="popular__news js-mob-slider">
-              <div class="news-card">
-                <div class="news-card__pic">
-                  <img class="news-card__img" src="img/news-1.jpg" alt="news-1">
-                  <div class="news-card__watched">
-                    <svg class="icon icon-eye">
-                      <use xlink:href="img/sprite.svg#icon-eye"></use>
-                    </svg>
-                    <span>357<span></div>
+        <img src="img/main-article-pic.jpg" alt="main article pic" class="article-pic">
+        <section class="container container--article">
+          <p>About 10 years ago, chartering a private jet seemed to be a lifetime dream. Nowadays, these luxury services are available for a wider audience. The blossom of the private jet charter business can be easily explained: they provide more flexibility and better pandemic-related safety measures (if compared to busy airports and lack of personal space onboard), they are cheaper than first-class of ordinary flights.</p>
+          <blockquote> In the USA, private jets are in high demand – commercial flights don’t often allow traveling between two desired destinations. Yet, with the increasing number of newcomers, the amount of issues and problems related to hiring a private jet grows as well. </blockquote>
+          <img class="alignright" src="img/article-img.jpg" alt="article pic 1">
+          <p>First, there are simply <b>not enough aircraft and pilots</b> to serve them all. Most people, not being able to travel in 2020 because of lockdowns and restrictions, try to compensate for what they have missed this year. In addition to that, many of those who could afford traveling with luxury decided to join the club. Health is the priority, not the money. As a result, the demand for planes keeps growing, and people are forced to be patient – especially during high seasons or holidays.</p>
+          <p>Christmas and Thanksgiving are traditionally the two busiest periods. If not booking a jet in advance, you risk not having one at all.</p>
+          <p>How to make sure that you will get a private jet or a helicopter without delays and waiting? Avoid using local companies based in one city. For example, with us, you will be able to see all available aircraft for charter, depending on your location. Therefore, better choice and faster service. No matter what type of aircraft you are looking for – light or business jet – the available planes will be displayed on the map.</p>
+          <p>Second, it’s <b>astronomical fees</b>. The industry was not ready for the growing demand after the pandemic but used the situation in their favor. This is mostly related to third-party companies that serve as intermediaries between the fliers and operators. They immediately reacted to the increasing demand for private flights by charging clients more than usual.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MrOlYkDCWgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Why is it important to tame the fees? Well, it’s just about saving money, right? If you want to pay a fixed fee and enjoy a private trip, be sure to charter a private jet on our website. We charge only 2,5% regardless of the distance and type of aircraft.</p>
+          <p>Third, it’s a necessity to buy a membership to use the services. The majority of companies insist on getting a membership: it’s convenient for frequent fliers. However, the cost of this membership is not cheap. On average, you will have to pay around $100 per month (apart from the ticket price, of course).</p>
+          <p>Membership has its benefits, especially if you travel at least several times per month. Yet, for rare and occasional travels, it’s not necessary. Be sure to check if a company requires you to join the membership program before booking a flight. Or just use our service – any can charter any private jet without additional programs and burdening memberships.</p>
+          <p>Fourth, and this is the most important issue, is <b>fraudulent companies offering fake or illegal flights</b>. They have become quite a problem recently. Seeing the increasing desire of wealthy people to pay for private jets, they create websites with stolen photos, texts, and even use the names of trustworthy companies.</p>
+          <div class="wp-block-group wp-block-collage">
+            <div class="wp-block-group__inner-container">
+              <div class="wp-block-columns">
+                <div class="wp-block-column">
+                  <figure class="wp-block-image">
+                    <img src="img/article-img-2.jpg" alt="article image in collage 1">
+                  </figure>
                 </div>
-                <ul class="news-card__hashtags news-card__hashtags--green">
-                  <li>#News</li>
-                  <li>#Food</li>
-                  <li>#Passengers</li>
-                  <li>#Aircrafts</li>
-                  <li>#Hungry</li>
-                </ul>
-                <h5 class="news-card__title">Food deliveries now on offer at Cleveland Hopkins</h5>
-                <div class="news-card__text">Hungry passengers can now use their smart phones or digital devices to order their favourite food for pick-up or delivery at Cleveland Hopkins International Airport. The service, available via Fraport USA’s new GateWaiter Mobile Meal</div>
-              </div>
-              <div class="news-card">
-                <div class="news-card__pic">
-                  <img class="news-card__img" src="img/news-2.jpg" alt="news-2">
-                  <div class="news-card__watched">
-                    <svg class="icon icon-eye">
-                      <use xlink:href="img/sprite.svg#icon-eye"></use>
-                    </svg>
-                    <span>180<span></div>
+                <div class="wp-block-column">
+                  <figure class="wp-block-image">
+                    <img src="img/article-img-3.jpg" alt="article image in collage 2">
+                  </figure>
+                  <figure class="wp-block-image">
+                    <img src="img/article-img-4.jpg" alt="article image in collage 3">
+                  </figure>
                 </div>
-                <ul class="news-card__hashtags news-card__hashtags--violet">
-                  <li>#News</li>
-                  <li>#Airport</li>
-                  <li>#Passengers</li>
-                  <li>#Health</li>
-                </ul>
-                <h5 class="news-card__title">Airport Health Accreditation for Greenville-Spartanburg</h5>
-                <div class="news-card__text">Greenville-Spartanburg International Airport (GSP) has become the first airport in South Carolina to be accredited in ACI’s Airport Health Accreditation programme. The Airport Health Accreditation recognises the airport’s commitment to prioritising health and safety measures</div>
-              </div>
-              <div class="news-card">
-                <div class="news-card__pic">
-                  <img class="news-card__img" src="img/news-3.jpg" alt="news-3">
-                  <div class="news-card__watched">
-                    <svg class="icon icon-eye">
-                      <use xlink:href="img/sprite.svg#icon-eye"></use>
-                    </svg>
-                    <span>27<span></div>
-                </div>
-                <ul class="news-card__hashtags">
-                  <li>#News</li>
-                  <li>#KoreanAirportsCorporation</li>
-                </ul>
-                <h5 class="news-card__title">KAC exporting its expertise internationally</h5>
-                <div class="news-card__text">The first half of 2021 has been a busy one for Korea Airports Corporation (KAC), which has quietly gone about expanding in the international arena by undertaking a feasibility study for an airport development project</div>
-              </div>
-              <div class="news-card">
-                <div class="news-card__pic">
-                  <img class="news-card__img" src="img/news-4.jpg" alt="news-4">
-                  <div class="news-card__watched">
-                    <svg class="icon icon-eye">
-                      <use xlink:href="img/sprite.svg#icon-eye"></use>
-                    </svg>
-                    <span>100<span></div>
-                </div>
-                <ul class="news-card__hashtags news-card__hashtags--green">
-                  <li>#News</li>
-                  <li>#Food</li>
-                  <li>#Passengers</li>
-                  <li>#Whataburger</li>
-                  <li>#SanAntonioAirport</li>
-                </ul>
-                <h5 class="news-card__title">Whataburger to open outlet at San Antonio International Airport</h5>
-                <div class="news-card__text">San Antonio based fast food operator, Whataburger, will join the list of F&B providers at San Antonio International Airport (SAT) when it opens an outlet at the Texas gateway early next year. Opened by F&B</div>
               </div>
             </div>
           </div>
-          <div class="popular__cards">
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">COVID safety audit praises Aberdeen and Glasgow airports COVID safety audit praises Aberdeen and Glasgow airports COVID safety audit praises Aberdeen and Glasgow airports COVID safety audit praises Aberdeen and Glasgow airports</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">21 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Helsinki’s “magnificent” new entrance to T2 to open on December</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">19 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Helsinki’s “magnificent” new entrance to T2 to open on December Helsinki’s “magnificent” new entrance to T2 to open on December</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">19 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Work starts on Phase 2 of Denver International Airport’s Great Hall</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">18 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Stabilisation plan’ helped Queenstown Airport through last year</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">18 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Splash of colour comes to Miami International Airport</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">18 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Federal funding for Calgary’s runway rehabilitation project</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">17 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Half year losses spell out harsh realities of life for Copenhagen Airports</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">16 September 2021</p>
-              </div>
-            </div>
-          </div>
-          <div class="popular__wrapper">
-            <div class="popular__news js-mob-slider">
-              <div class="news-card">
-                <div class="news-card__pic">
-                  <img class="news-card__img" src="img/news-1.jpg" alt="news-1">
-                  <div class="news-card__watched">
-                    <svg class="icon icon-eye">
-                      <use xlink:href="img/sprite.svg#icon-eye"></use>
-                    </svg>
-                    <span>357<span></div>
-                </div>
-                <ul class="news-card__hashtags news-card__hashtags--green">
-                  <li>#News</li>
-                  <li>#Food</li>
-                  <li>#Passengers</li>
-                  <li>#Aircrafts</li>
-                  <li>#Hungry</li>
-                </ul>
-                <h5 class="news-card__title">Food deliveries now on offer at Cleveland Hopkins</h5>
-                <div class="news-card__text">Hungry passengers can now use their smart phones or digital devices to order their favourite food for pick-up or delivery at Cleveland Hopkins International Airport. The service, available via Fraport USA’s new GateWaiter Mobile Meal</div>
-              </div>
-              <div class="news-card">
-                <div class="news-card__pic">
-                  <img class="news-card__img" src="img/news-2.jpg" alt="news-2">
-                  <div class="news-card__watched">
-                    <svg class="icon icon-eye">
-                      <use xlink:href="img/sprite.svg#icon-eye"></use>
-                    </svg>
-                    <span>180<span></div>
-                </div>
-                <ul class="news-card__hashtags news-card__hashtags--violet">
-                  <li>#News</li>
-                  <li>#Airport</li>
-                  <li>#Passengers</li>
-                  <li>#Health</li>
-                </ul>
-                <h5 class="news-card__title">Airport Health Accreditation for Greenville-Spartanburg</h5>
-                <div class="news-card__text">Greenville-Spartanburg International Airport (GSP) has become the first airport in South Carolina to be accredited in ACI’s Airport Health Accreditation programme. The Airport Health Accreditation recognises the airport’s commitment to prioritising health and safety measures</div>
-              </div>
-              <div class="news-card">
-                <div class="news-card__pic">
-                  <img class="news-card__img" src="img/news-3.jpg" alt="news-3">
-                  <div class="news-card__watched">
-                    <svg class="icon icon-eye">
-                      <use xlink:href="img/sprite.svg#icon-eye"></use>
-                    </svg>
-                    <span>27<span></div>
-                </div>
-                <ul class="news-card__hashtags">
-                  <li>#News</li>
-                  <li>#KoreanAirportsCorporation</li>
-                </ul>
-                <h5 class="news-card__title">KAC exporting its expertise internationally</h5>
-                <div class="news-card__text">The first half of 2021 has been a busy one for Korea Airports Corporation (KAC), which has quietly gone about expanding in the international arena by undertaking a feasibility study for an airport development project</div>
-              </div>
-            </div>
-          </div>
-          <div class="popular__cards">
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">COVID safety audit praises Aberdeen and Glasgow airports COVID safety audit praises Aberdeen and Glasgow airports COVID safety audit praises Aberdeen and Glasgow airports COVID safety audit praises Aberdeen and Glasgow airports</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">21 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Helsinki’s “magnificent” new entrance to T2 to open on December</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">19 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Helsinki’s “magnificent” new entrance to T2 to open on December Helsinki’s “magnificent” new entrance to T2 to open on December</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">19 September 2021</p>
-              </div>
-            </div>
-            <div class="simple-card">
-              <p class="simple-card__title js-cut-title">Work starts on Phase 2 of Denver International Airport’s Great Hall</p>
-              <div class="simple-card__info">
-                <a href="#" class="simple-card__more">Read more</a>
-                <p class="simple-card__date">18 September 2021</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="pagination">
-          <a href="#" class="pagination__button">Previous</a>
-          <ul class="pagination__list">
-            <li class="pagination__number pagination__number--active"><a href="#">1</a></li>
-            <li class="pagination__number"><a href="#">2</a></li>
-            <li class="pagination__number"><a href="#">3</a></li>
-            <li class="pagination__number"><a href="#">...</a></li>
-            <li class="pagination__number"><a href="#">8</a></li>
-            <li class="pagination__number"><a href="#">9</a></li>
-            <li class="pagination__number"><a href="#">10</a></li>
+          <p>This is a serious matter, as it doesn’t concern losing a few hundreds of bucks or the absence of planes. Such activity aims to steal thousands of dollars by deceiving customers, especially newcomers. Once they get the money, the fake brokers stop replying to emails and simply disappear.</p>
+          <p>What is the best way to protect yourself from fraudsters? Do research about any broker you’re dealing with for the first time. The victims of such frauds don’t remain silent. Do not hesitate to ask for references and check the validity of a phone number.</p>
+          <p>In general, a jet charter is still the same affordable and available as in the pre-Covid era. The growing popularity of private flights should never become an obstacle between you and your comfort. Be sure to hire a reliable broker with efficient experience to entrust with your flights.</p>
+          <p><b>Key statistics outlined in the Waypoint 2050 pathways include:</b></p>
+          <ul>
+            <li>By 2050, the industry will connect over 10 billion passengers a year, with traffic growing 2.5 times higher than 2019, but also reaching net-zero CO2 emissions.</li>
+            <li>Radical new technologies such as new configurations of aircraft, introducing hybrid power architectures or shifting to electricity or hydrogen as a source of power could contribute between 12% and 34% of the needed emissions reductions.</li>
+            <li>Sustainable aviation fuels could contribute between 53% and 71% of required carbon reductions.</li>
+            <li>Improving the way the sector operates and provides infrastructure could reduce emissions between 7% and 10%.</li>
+            <li>And carbon removals will likely be needed for around 8% of residual emissions in 2050.</li>
           </ul>
-          <a href="#" class="pagination__button">Next</a>
+          <img class="alignleft" src="img/article-img.jpg" alt="article pic 1">
+          <p>First, there are simply <b>not enough aircraft and pilots</b> to serve them all. Most people, not being able to travel in 2020 because of lockdowns and restrictions, try to compensate for what they have missed this year. In addition to that, many of those who could afford traveling with luxury decided to join the club. Health is the priority, not the money. As a result, the demand for planes keeps growing, and people are forced to be patient – especially during high seasons or holidays.</p>
+          <p>Christmas and Thanksgiving are traditionally the two busiest periods. If not booking a jet in advance, you risk not having one at all.</p>
+          <p>How to make sure that you will get a private jet or a helicopter without delays and waiting? Avoid using local companies based in one city. For example, with us, you will be able to see all available aircraft for charter, depending on your location. Therefore, better choice and faster service. No matter what type of aircraft you are looking for – light or business jet – the available planes will be displayed on the map.</p>
+          <div class="article-slider js-article-slider">
+            <img src="img/article-slider-img.jpg" alt="slide 1">
+            <img src="img/slide-img.jpg" alt="slide 2">
+            <img src="img/article-slider-img.jpg" alt="slide 3">
+          </div>
+          <p>Second, it’s <b>astronomical fees</b>. The industry was not ready for the growing demand after the pandemic but used the situation in their favor. This is mostly related to third-party companies that serve as intermediaries between the fliers and operators. They immediately reacted to the increasing demand for private flights by charging clients more than usual.</p>
+          <p>Why is it important to tame the fees? Well, it’s just about saving money, right? If you want to pay a fixed fee and enjoy a private trip, be sure to charter a private jet on our website. We charge only 2,5% regardless of the distance and type of aircraft.</p>
+        </section>
+        <div class="article-footer">
+          <div class="article-tag-cloud">
+            <h5 class="title-h5">Tags:</h5>
+            <div class="article-tags">
+              <div class="tag tag--transparent">News</div>
+              <div class="tag tag--transparent">Airports</div>
+              <div class="tag tag--transparent">Aircrafts</div>
+              <div class="tag tag--transparent">Report</div>
+              <div class="tag tag--transparent">Another tag</div>
+            </div>
+          </div>
+          <div class="article-vote">
+            <h5 class="title-h5 article-vote__text">Did you like this article?</h5>
+            <button class="vote-button vote-button--up" type="button">
+              <svg class="icon icon-upvote">
+                <use xlink:href="img/sprite.svg#icon-upvote"></use>
+              </svg> Upvote</button>
+            <button class="vote-button vote-button--down" type="button">
+              <svg class="icon icon-downvote">
+                <use xlink:href="img/sprite.svg#icon-downvote"></use>
+              </svg> Downvote</button>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
     <footer class="footer">
       <div class="footer__inner">

@@ -25,7 +25,7 @@
     height: 100%
     object-position: 50% 50%
     object-fit: cover
-    font-family: 'object-fit: cover object-position: 50% 50%'
+    font-family: 'object-fit: cover; object-position: 50% 50%'
   &__text
     position: relative
     margin-top: 156px
@@ -202,6 +202,14 @@
   line-height: 1
   &:last-child
     margin-right: 0
+  &.tag--transparent
+    margin: 10px 12px 5px 0
+    padding: 5px 8px 4px
+    font-size: rem(16)
+    box-shadow: none
+    background: transparent
+    color: $brand-dark-blue
+    border: 1px solid $brand-dark-blue
   +r(1360)
     font-size: rem(18)
   +r(767)
@@ -425,8 +433,6 @@
       order: -1
       margin-bottom: 15px
       font-size: rem(14)
-
-
 
 .pagination
   display: flex

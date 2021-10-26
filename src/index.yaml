@@ -3,3 +3,5 @@ ProjectTitle: at-flights
 PageList:
   - file: blog.html
     ready: 100
+  - file: article.html
+    ready: 100
