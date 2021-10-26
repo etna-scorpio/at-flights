@@ -3,12 +3,19 @@
     <a href="#" class="logo"><img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo"></a>
     <div class="header__actions">
       {% if bodyClass === 'body--article' %}
-      <a href="#" class="header-link">Blog</a>
+        <div class="header__links">
+          <a href="#" class="header-link">{{mixins.icon('back-arrow')}}<span>Blog</span></a>
+          <a href="#" class="sign-in">
+            {{mixins.icon('sign-in')}}
+            <span>Sign in</span>
+          </a>
+        </div>
+      {% else %}
+        <a href="#" class="sign-in">
+          {{mixins.icon('sign-in')}}
+          <span>Sign in</span>
+        </a>
       {% endif %}
-      <a href="#" class="sign-in">
-        {{mixins.icon('sign-in')}}
-        <span>Sign in</span>
-      </a>
       <div class="theme-switcher">
         <button type="button" class="theme-switcher__button theme-switcher__button--light">{{ mixins.icon('sun') }}</button>
         <button type="button" class="theme-switcher__button theme-switcher__button--dark">{{ mixins.icon('moon') }}</button>

@@ -23,13 +23,19 @@
       <div class="header__inner">
         <a href="#" class="logo"><img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo"></a>
         <div class="header__actions">
-          <a href="#" class="header-link">Blog</a>
-          <a href="#" class="sign-in">
-            <svg class="icon icon-sign-in">
-              <use xlink:href="img/sprite.svg#icon-sign-in"></use>
-            </svg>
-            <span>Sign in</span>
-          </a>
+          <div class="header__links">
+            <a href="#" class="header-link">
+              <svg class="icon icon-back-arrow">
+                <use xlink:href="img/sprite.svg#icon-back-arrow"></use>
+              </svg>
+              <span>Blog</span></a>
+            <a href="#" class="sign-in">
+              <svg class="icon icon-sign-in">
+                <use xlink:href="img/sprite.svg#icon-sign-in"></use>
+              </svg>
+              <span>Sign in</span>
+            </a>
+          </div>
           <div class="theme-switcher">
             <button type="button" class="theme-switcher__button theme-switcher__button--light">
               <svg class="icon icon-sun">
@@ -49,7 +55,7 @@
     <div class="out">
       <main class="article">
         <section class="container container--article">
-          <h1 class="title-h1 mob-hidden">Most Common Issues With Chartering A Private Jet in the USA And How To Solve Them</h1>
+          <h1 class="title-h1">Most Common Issues With Chartering A Private Jet in the USA And How To Solve Them</h1>
           <div class="article-date">07 October 2021</div>
         </section>
         <img src="img/main-article-pic.jpg" alt="main article pic" class="article-pic">
@@ -121,14 +127,18 @@
           </div>
           <div class="article-vote">
             <h5 class="title-h5 article-vote__text">Did you like this article?</h5>
-            <button class="vote-button vote-button--up" type="button">
+            <div class="vote-counter js-vote-counter">
+              <div class="vote-counter__number"><span>10 upvotes</span></div>
+              <div class="vote-counter__number"><span>1 dislike</span></div>
+            </div>
+            <button class="vote-button vote-button--up js-vote-button" type="button">
               <svg class="icon icon-upvote">
                 <use xlink:href="img/sprite.svg#icon-upvote"></use>
               </svg> Upvote</button>
-            <button class="vote-button vote-button--down" type="button">
+            <button class="vote-button vote-button--down js-vote-button" type="button">
               <svg class="icon icon-downvote">
                 <use xlink:href="img/sprite.svg#icon-downvote"></use>
-              </svg> Downvote</button>
+              </svg> Dislike</button>
           </div>
         </div>
       </main>

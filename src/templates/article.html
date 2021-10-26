@@ -7,7 +7,7 @@ bodyClass: body--article
 {% block content %}
   <main class="article">
     <section class="container container--article">
-      <h1 class="title-h1 mob-hidden">Most Common Issues With Chartering A Private Jet in the USA And How To Solve Them</h1>
+      <h1 class="title-h1">Most Common Issues With Chartering A Private Jet in the USA And How To Solve Them</h1>
       <div class="article-date">07 October 2021</div>
     </section>
     <img src="img/main-article-pic.jpg" alt="main article pic" class="article-pic">
@@ -81,8 +81,12 @@ bodyClass: body--article
       </div>
       <div class="article-vote">
         <h5 class="title-h5 article-vote__text">Did you like this article?</h5>
-        <button class="vote-button vote-button--up" type="button">{{ mixins.icon('upvote') }}Upvote</button>
-        <button class="vote-button vote-button--down" type="button">{{ mixins.icon('downvote') }}Downvote</button>
+        <div class="vote-counter js-vote-counter">
+          <div class="vote-counter__number"><span>10 upvotes</span></div>
+          <div class="vote-counter__number"><span>1 dislike</span></div>
+        </div>
+        <button class="vote-button vote-button--up js-vote-button" type="button">{{ mixins.icon('upvote') }}Upvote</button>
+        <button class="vote-button vote-button--down js-vote-button" type="button">{{ mixins.icon('downvote') }}Dislike</button>
       </div>
     </div>
   </main>

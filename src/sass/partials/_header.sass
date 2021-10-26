@@ -16,7 +16,23 @@
     align-items: center
     padding-top: 4px
     +r(767)
+      padding-top: 3px
+    +r(500)
       padding-top: 1px
+  &__links
+    display: flex
+    align-items: center
+    +r(767)
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      padding: 0 15px
+      justify-content: space-between
+      .sign-in
+        margin-right: 0
+      .header-link
+        margin-right: 0
 
 .logo
   display: block
@@ -32,6 +48,7 @@
     display: block
 
 .sign-in
+  text-decoration: none
   margin-right: 95px
   font-family: 'Oxygen', sans-serif
   font-weight: 700
@@ -52,6 +69,8 @@
     vertical-align: middle
     font-size: rem(40)
     transition: fill 0.15s linear
+    +r(767)
+      font-size: rem(35)
     +r(500)
       font-size: rem(30)
   span
@@ -59,14 +78,14 @@
     display: inline-block
     vertical-align: middle
     font-size: rem(19)
+    +r(767)
+      margin: 1px 0 0 10px
+      font-size: rem(18)
     +r(500)
       font-size: rem(17)
 
-
 .header-link
-  position: relative
   display: inline-block
-  padding: 9px 0
   margin-right: 50px
   font-family: 'Oxygen', sans-serif
   font-size: rem(19)
@@ -74,34 +93,36 @@
   text-decoration: none
   color: $green
   transition: color 0.15s linear
-  &:after
-    content: ''
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    height: 1px
-    background-color: $green
-    transition: width 0.2s ease
+  span
+    position: relative
+    padding: 9px 0
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: $green
+      transition: width 0.2s ease
   &:hover
     color: lighten($green, 10%)
-    &:after
+    span:after
       width: 0
-
+  +r(767)
+    font-size: rem(18)
+  +r(500)
+    font-size: rem(17)
+  .icon
+    display: none
+    margin-right: 4px
+    font-size: rem(15)
+    +r(767)
+      display: inline-block
 
 .theme-switcher
   position: relative
   font-size: 0
-  +r(500)
-    position: absolute
-    z-index: 1
-    top: 100%
-    right: 12px
-    margin-top: 10px
-    padding: 6px 12px 6px 9px
-    box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.2)
-    border-radius: 5px
-    background: #fff
   &:after
     content: ''
     position: absolute
@@ -110,10 +131,6 @@
     top: 0
     left: 50px
     bottom: 0
-    +r(500)
-      top: 5px
-      bottom: 5px
-      left: 54px
   &__button
     background: none
     vertical-align: middle
@@ -122,13 +139,33 @@
       font-size: rem(34)
     &--light
       margin-right: rem(16)
-      +r(500)
-        margin-right: rem(11.2)
       svg
         fill: #FDAC34
     &--dark
       margin-left: rem(22.4)
-      +r(500)
-        margin-left: rem(16)
       svg
         font-size: rem(24)
+
+body:not(.body--article)
+  .theme-switcher
+    +r(500)
+      position: absolute
+      z-index: 1
+      top: 100%
+      right: 12px
+      margin-top: 10px
+      padding: 6px 12px 6px 9px
+      box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.2)
+      border-radius: 5px
+      background: #fff
+      &:after
+        top: 5px
+        left: 54px
+        bottom: 5px
+  .theme-switcher__button
+    &--light
+      +r(500)
+        margin-right: rem(11.2)
+    &--dark
+      +r(500)
+        margin-left: rem(16)

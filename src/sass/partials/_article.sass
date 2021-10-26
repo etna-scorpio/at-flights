@@ -8,11 +8,10 @@
     position: relative
     max-width: 775px
     margin: 60px auto
-    padding: 3.5px 0 3.5px 40px
+    padding: 3.5px 0 3.5px 45px
     font-size: rem(19)
     font-weight: 500
     line-height: 1.7
-    border-left: 5px solid $violet
     &:before
       content: '“'
       position: absolute
@@ -22,13 +21,37 @@
       font-size: rem(130)
       color: rgba(51, 102, 154, 0.15)
       line-height: 1
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 5px
+      max-height: 135px
+      background: $violet
+    +r(1023)
+      margin: 45px auto
+    +r(767)
+      max-width: 600px
+      margin: 35px auto
+      padding-left: 25px
+      font-size: rem(18)
+      &:before
+        left: 11px
+        margin-top: -35px
   img.alignright,
   img.alignleft
     display: block
     max-width: 50%
+    min-width: 270px
     +clr
     &:last-child
       margin-bottom: 0
+    +r(500)
+      float: none
+      max-width: 100%
+      margin: 0
   img.alignright
     float: right
     margin: 0 0 5px 25px
@@ -39,10 +62,30 @@
     width: 100%
     margin: 60px auto
     min-height: 450px
+    + p
+      margin-top: 0
+    +r(1023)
+      margin: 45px auto
+      min-height: 430px
+    +r(767)
+      min-height: 350px
+    +r(500)
+      height: auto
+      min-height: 220px
+      margin: 35px auto
   .wp-block-collage
     margin: 60px auto 40px
+    + p
+      margin-top: 0
+    +r(1023)
+      margin: 45px auto 20px
+    +r(500)
+      margin: 35px auto 15px
     .wp-block-columns
       display: flex
+      +r(500)
+        flex-wrap: wrap
+        margin: 0 -7.5px
     .wp-block-column
       flex-basis: calc(50% - 20px)
       &:first-child
@@ -57,30 +100,51 @@
         min-height: 275px
         object-fit: cover
         font-family: 'object-fit: cover'
+        +r(767)
+          min-height: 220px
+        +r(500)
+          min-height: 130px
+          max-height: 300px
       figure
         display: block
         margin-bottom: 20px
+      +r(500)
+        flex-basis: 100%
+        &:first-child
+          flex-basis: 100%
+          margin-right: 0
+          figure
+            height: auto
+        &:last-child
+          display: flex
+        figure
+          margin: 0 7.5px 15px
   ul
-    margin: 25px 0 40px
-    max-width: 930px
-    li
-      position: relative
-      margin-bottom: 25px
-      padding-left: 30px
-      &:before
-        content: ''
-        position: absolute
-        top: 8px
-        left: 5px
-        width: 13px
-        height: 13px
-        background: $yellow
+    &:not(.slick-dots)
+      margin: 25px 0 40px
+      max-width: 930px
+      +r(1023)
+        max-width: 750px
+      li
+        position: relative
+        margin-bottom: 25px
+        padding-left: 30px
+        &:before
+          content: ''
+          position: absolute
+          top: 8px
+          left: 5px
+          width: 13px
+          height: 13px
+          background: $yellow
 
 .article-date
   margin-top: 21px
   font-size: rem(17)
   font-weight: 500
   color: #AAAAAA
+  +r(767)
+    margin-top: 15px
 
 .article-pic
   display: block
@@ -91,13 +155,21 @@
   margin: 60px auto
   object-fit: cover
   font-family: 'object-fit: cover'
-
+  +r(1023)
+    margin: 45px auto
+  +r(767)
+    margin: 35px auto
 
 .article-slider
   margin: 60px auto
+  +r(1023)
+    margin: 45px auto
+  +r(500)
+    margin: 35px auto
   img
+    display: block
     max-width: 100%
-    min-height: 250px
+    min-height: 280px
     object-fit: cover
     font-family: 'object-fit: cover'
   .slick-dots
@@ -137,27 +209,44 @@
     margin-top: -25px
     background: #fff
     font-size: rem(17)
+    box-shadow: 0px 2px 5px 0px rgba(66, 103, 178, 0.4)
     transition: background 0.2s linear
     &:hover,
     &:active
       background: $yellow
+    +r(500)
+      width: 30px
+      height: 30px
+      background: rgba(255, 255, 255, 0.5)
+  svg
+    +r(500)
+      height: 10px
   .slick-next
     right: 15px
+    +r(500)
+      right: 5px
     svg
       margin-left: 2px
   .slick-prev
     left: 15px
+    +r(500)
+      left: 5px
     svg
       margin-right: 2px
 
 .article-footer
   display: flex
+  align-items: flex-start
   justify-content: space-between
   max-width: 1060px
   margin: 60px auto 0
   padding: 0 30px
   +r(1023)
+    display: block
+    margin-top: 20px
     padding: 0 15px
+  +r(500)
+    margin-top: 30px
 
 .article-tag-cloud
   display: flex
@@ -165,17 +254,87 @@
     margin-top: 14px
     font-size: rem(19)
     line-height: 1
+    +r(767)
+      font-size: rem(18)
 
 .article-tags
   display: flex
   flex-wrap: wrap
+  align-items: flex-start
   margin-left: 20px
+  +r(500)
+    margin-left: 14px
 
 .article-vote
+  display: flex
+  align-items: center
+  margin-left: 10px
+  +r(1023)
+    justify-content: center
+    margin-top: 55px
+    margin-left: 0
+  +r(500)
+    flex-wrap: wrap
   &__text
+    margin-right: 20px
     font-size: rem(19)
+    white-space: pre
+    +r(500)
+      flex-basis: 100%
+      margin: 0 0 20px
+      text-align: center
+      font-size: rem(18)
 
 .vote-button
+  display: flex
+  justify-content: center
+  padding: 11px 14px
+  align-items: center
+  font-family: 'Oxygen', sans-serif
   font-size: rem(18)
-  &--upvote
+  font-weight: 700
+  color: #fff
+  border-radius: 3px
+  line-height: 1
+  transition: background 0.15s linear
+  +r(767)
+    font-size: rem(16)
+  &--up
+    margin-right: 15px
     background: $green
+    &:hover,
+    &:active
+      background: lighten($green, 10%)
+  &--down
+    background: $brand-dark-navy
+    &:hover,
+    &:active
+      background: lighten($brand-dark-navy, 10%)
+  .icon
+    margin: -2px 10px 0 0
+    font-size: rem(25)
+    +r(767)
+      font-size: rem(20)
+
+.vote-counter
+  display: none
+  &__number
+    width: 120px
+    +r(767)
+      width: 111px
+      text-align: center
+    span
+      display: inline-block
+      padding: 10px 0
+      +r(767)
+        padding: 7.5px 0
+    &:first-child
+      margin-right: 15px
+      text-align: center
+      color: $green
+      span
+        border-bottom: 1px solid $green
+    &:last-child
+      span
+        color: $brand-dark-navy
+        border-bottom: 1px solid $brand-dark-navy

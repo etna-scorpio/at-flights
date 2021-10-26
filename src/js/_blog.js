@@ -42,3 +42,9 @@ $('.js-article-slider').slick({
   prevArrow: '<button class="slick-prev slick-arrow" aria-label="Next" type="button"><svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg></button>',
   nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg></button>'
 });
+
+
+$('.js-vote-button').click(function() {
+  $('.js-vote-button').css('display', 'none');
+  $('.js-vote-counter').css('display', 'flex');
+});
