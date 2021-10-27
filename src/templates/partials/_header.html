@@ -5,6 +5,7 @@
       <img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo">
     </a>
     <div class="header__actions">
+<<<<<<< HEAD
       {% if bodyClass %}
         {% if 'body--article' in bodyClass | string %}
           <div class="header__links">
@@ -15,11 +16,20 @@
             </a>
           </div>
         {% else %}
+=======
+      {% if bodyClass === 'body--article' %}
+        <div class="header__links">
+          <a href="#" class="header-link">{{mixins.icon('back-arrow')}}<span>Blog</span></a>
+>>>>>>> e05d7f527e1e6a424e51f5260158523ce4c011f9
           <a href="#" class="sign-in">
             {{mixins.icon('sign-in')}}
             <span>Sign in</span>
           </a>
+<<<<<<< HEAD
         {% endif %}
+=======
+        </div>
+>>>>>>> e05d7f527e1e6a424e51f5260158523ce4c011f9
       {% else %}
         <a href="#" class="sign-in">
           {{mixins.icon('sign-in')}}
