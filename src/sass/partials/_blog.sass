@@ -204,16 +204,20 @@
     margin-right: 0
   &.tag--transparent
     margin: 10px 12px 5px 0
-    padding: 5px 8px 4px
-    font-size: rem(16)
+    padding: 4px 8px 7px
     box-shadow: none
     background: transparent
     color: $brand-dark-blue
-    border: 1px solid $brand-dark-blue
+    border: 1px solid currentColor
   +r(1360)
     font-size: rem(18)
+    &.tag--transparent
+      font-size: rem(16)
   +r(767)
     font-size: rem(16)
+    &.tag--transparent
+      margin-bottom: 2.5px
+      margin-right: 10px
 
 .popular
   &__wrapper

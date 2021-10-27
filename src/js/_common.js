@@ -48,3 +48,16 @@ $('.js-vote-button').click(function() {
   $('.js-vote-button').css('display', 'none');
   $('.js-vote-counter').css('display', 'flex');
 });
+
+
+$('.js-switch-light').click(function() {
+  if ($('body').hasClass('body--dark-theme')) {
+    $('body').removeClass('body--dark-theme');
+  }
+});
+
+$('.js-switch-dark').click(function() {
+  if (!$('body').hasClass('body--dark-theme')) {
+    $('body').addClass('body--dark-theme');
+  }
+});

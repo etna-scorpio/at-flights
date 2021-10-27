@@ -1,17 +1,34 @@
 <header class="header">
   <div class="header__inner">
-    <a href="#" class="logo"><img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo"></a>
+    <a href="#" class="logo">
+      <img class="logo__pic logo__pic--dark" src="img/at-flights-logo-dark-theme.png" alt="At Flights Logo">
+      <img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo">
+    </a>
     <div class="header__actions">
-      {% if bodyClass === 'body--article' %}
-      <a href="#" class="header-link">Blog</a>
+      {% if bodyClass %}
+        {% if 'body--article' in bodyClass | string %}
+          <div class="header__links">
+            <a href="#" class="header-link">{{mixins.icon('back-arrow')}}<span>Blog</span></a>
+            <a href="#" class="sign-in">
+              {{mixins.icon('sign-in')}}
+              <span>Sign in</span>
+            </a>
+          </div>
+        {% else %}
+          <a href="#" class="sign-in">
+            {{mixins.icon('sign-in')}}
+            <span>Sign in</span>
+          </a>
+        {% endif %}
+      {% else %}
+        <a href="#" class="sign-in">
+          {{mixins.icon('sign-in')}}
+          <span>Sign in</span>
+        </a>
       {% endif %}
-      <a href="#" class="sign-in">
-        {{mixins.icon('sign-in')}}
-        <span>Sign in</span>
-      </a>
       <div class="theme-switcher">
-        <button type="button" class="theme-switcher__button theme-switcher__button--light">{{ mixins.icon('sun') }}</button>
-        <button type="button" class="theme-switcher__button theme-switcher__button--dark">{{ mixins.icon('moon') }}</button>
+        <button type="button" class="theme-switcher__button theme-switcher__button--light js-switch-light">{{ mixins.icon('sun') }}</button>
+        <button type="button" class="theme-switcher__button theme-switcher__button--dark js-switch-dark">{{ mixins.icon('moon') }}</button>
       </div>
     </div>
   </div>
