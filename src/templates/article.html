@@ -7,14 +7,14 @@ bodyClass: body--article
 {% block content %}
   <main class="article">
     <section class="container container--article">
-      <h1 class="title-h1 mob-hidden">Most Common Issues With Chartering A Private Jet in the USA And How To Solve Them</h1>
+      <h1 class="title-h1">Most Common Issues With Chartering A Private Jet in the USA And How To Solve Them</h1>
       <div class="article-date">07 October 2021</div>
     </section>
     <img src="img/main-article-pic.jpg" alt="main article pic" class="article-pic">
     <section class="container container--article">
       <p>About 10 years ago, chartering a private jet seemed to be a lifetime dream. Nowadays, these luxury services are available for a wider audience. The blossom of the private jet charter business can be easily explained: they provide more flexibility and better pandemic-related safety measures (if compared to busy airports and lack of personal space onboard), they are cheaper than first-class of ordinary flights.</p>
       <blockquote>
-        In the USA, private jets are in high demand – commercial flights don’t often allow traveling between two desired destinations. Yet, with the increasing number of newcomers, the amount of issues and problems related to hiring a private jet grows as well.
+        <p>In the USA, private jets are in high demand – commercial flights don’t often allow traveling between two desired destinations. Yet, with the increasing number of newcomers, the amount of issues and problems related to hiring a private jet grows as well.</p>
       </blockquote>
       <img class="alignright" src="img/article-img.jpg" alt="article pic 1">
       <p>First, there are simply <b>not enough aircraft and pilots</b> to serve them all. Most people, not being able to travel in 2020 because of lockdowns and restrictions, try to compensate for what they have missed this year. In addition to that, many of those who could afford traveling with luxury decided to join the club. Health is the priority, not the money. As a result, the demand for planes keeps growing, and people are forced to be patient – especially during high seasons or holidays.</p>
@@ -81,8 +81,12 @@ bodyClass: body--article
       </div>
       <div class="article-vote">
         <h5 class="title-h5 article-vote__text">Did you like this article?</h5>
-        <button class="vote-button vote-button--up" type="button">{{ mixins.icon('upvote') }}Upvote</button>
-        <button class="vote-button vote-button--down" type="button">{{ mixins.icon('downvote') }}Downvote</button>
+        <div class="vote-counter js-vote-counter">
+          <div class="vote-counter__number"><span>10 upvotes</span></div>
+          <div class="vote-counter__number"><span>1 dislike</span></div>
+        </div>
+        <button class="vote-button vote-button--up js-vote-button" type="button">{{ mixins.icon('upvote') }}Upvote</button>
+        <button class="vote-button vote-button--down js-vote-button" type="button">{{ mixins.icon('downvote') }}Dislike</button>
       </div>
     </div>
   </main>

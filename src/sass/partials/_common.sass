@@ -26,3 +26,74 @@ body
 .mob-visible
   +r(500)
     display: inherit
+
+body
+  &.body--dark-theme
+    background: $dark-bg
+    color: #fafafa
+    .header-link
+      color: $neon-green
+    .logo
+      &__pic
+        display: none
+        &--dark
+          display: block
+      .icon-back-arrow
+        fill: $neon-green
+    .sign-in
+      color: lighten($brand-dark-blue, 25%)
+      &:hover
+        color: #fafafa
+        svg
+          fill: #fafafa
+      svg
+        fill: lighten($brand-dark-blue, 25%)
+    .theme-switcher:after
+      background: #aaa
+    .theme-switcher__button--light svg
+      fill: #aaa
+    .theme-switcher__button--dark svg
+      fill: $yellow
+    .article blockquote
+      &:before
+        color: rgba(darken($violet, 10%), 0.4)
+    .footer
+      &__link .icon
+        fill: #fafafa
+        &.icon-whatsapp
+          path
+            fill: #fafafa
+          .icon--hover
+            display: none
+        &.icon-telegram
+          color: #C8DAEA
+    .tag.tag--transparent
+      color: lighten($brand-dark-blue, 25%)
+    .vote-counter__number
+      span
+        color: lighten($brand-dark-blue, 25%)
+      &:first-child
+        span
+          color: $neon-green
+    .news-card
+      &__hashtags
+        color: lighten($brand-dark-blue, 25%)
+      &__hashtags--green
+        color: $neon-green
+      &__hashtags--violet
+        color: lighten(saturate($violet, 25%), 12%)
+      &__text
+        color: #aaa
+        &:after
+          background: linear-gradient(180deg,rgba(255,255,255,0) 0%, $dark-bg 100%)
+      &__watched
+        color: $brand-dark-blue
+        .icon
+          fill: $brand-dark-blue
+    .simple-card
+      background: #1F2C47
+      border: 1px solid #254D9B
+      &__more
+        color: lighten(saturate($violet, 25%), 12%)
+      &__date
+        color: #aaa

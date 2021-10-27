@@ -18,10 +18,13 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
 
-  <body>
+  <body class="body--dark-theme">
     <header class="header">
       <div class="header__inner">
-        <a href="#" class="logo"><img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo"></a>
+        <a href="#" class="logo">
+          <img class="logo__pic logo__pic--dark" src="img/at-flights-logo-dark-theme.png" alt="At Flights Logo">
+          <img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo">
+        </a>
         <div class="header__actions">
           <a href="#" class="sign-in">
             <svg class="icon icon-sign-in">
@@ -30,12 +33,12 @@
             <span>Sign in</span>
           </a>
           <div class="theme-switcher">
-            <button type="button" class="theme-switcher__button theme-switcher__button--light">
+            <button type="button" class="theme-switcher__button theme-switcher__button--light js-switch-light">
               <svg class="icon icon-sun">
                 <use xlink:href="img/sprite.svg#icon-sun"></use>
               </svg>
             </button>
-            <button type="button" class="theme-switcher__button theme-switcher__button--dark">
+            <button type="button" class="theme-switcher__button theme-switcher__button--dark js-switch-dark">
               <svg class="icon icon-moon">
                 <use xlink:href="img/sprite.svg#icon-moon"></use>
               </svg>
@@ -374,7 +377,10 @@
     </div>
     <footer class="footer">
       <div class="footer__inner">
-        <a href="#" class="logo"><img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo"></a>
+        <a href="#" class="logo">
+          <img class="logo__pic logo__pic--dark" src="img/at-flights-logo-dark-theme.png" alt="At Flights Logo">
+          <img class="logo__pic" src="img/at-flights-logo.png" alt="At Flights Logo">
+        </a>
         <div class="footer__socs">
           <span>Find us on</span>
           <div class="footer__icons">

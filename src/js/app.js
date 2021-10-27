@@ -1,7 +1,8 @@
 import objectFitImages from 'object-fit-images';
-import './_blog';
+import './_common';
 
 objectFitImages();
+
 document.addEventListener('DOMContentLoaded', () => {
   let wrapper = document.querySelectorAll('.js-cut-title');
 
